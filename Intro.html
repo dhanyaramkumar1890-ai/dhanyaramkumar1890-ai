@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Unsung Heroines</title>
+    <style>
+        /* Reset default styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fefefe;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .title-block h1 {
+            font-size: 3rem;
+            color: #d35400; /* Orange accent */
+            margin-bottom: 10px;
+        }
+
+        .title-block .lead {
+            font-size: 1.2rem;
+            color: #555;
+        }
+
+        /* Ribbon (tricolor) */
+        .ribbon {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .ribbon span {
+            display: inline-block;
+            width: 60px;
+            height: 15px;
+            margin: 0 2px;
+            border-radius: 3px;
+        }
+
+        .ribbon .s { background-color: #ff9933; } /* Saffron */
+        .ribbon .w { background-color: #ffffff; border: 1px solid #ccc; } /* White */
+        .ribbon .g { background-color: #138808; } /* Green */
+
+        /* Grid container for cards */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        /* Card styling */
+        .card {
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        /* Portrait images */
+        .portrait img,
+        .card > img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 3px solid #d35400; /* Accent line */
+        }
+
+        /* Card content */
+        .content {
+            padding: 20px;
+        }
+
+        .content h3 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+
+        .content p {
+            margin-bottom: 10px;
+            color: #555;
+            font-size: 1rem;
+        }
+
+        .content u {
+            color: #d35400;
+            font-weight: bold;
+        }
+
+        /* Videos inside cards */
+        video {
+            display: block;
+            margin: 15px 0;
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        /* Horizontal rule */
+        hr {
+            border: none;
+            border-top: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        /* Responsive typography */
+        @media (max-width: 768px) {
+            .title-block h1 {
+                font-size: 2.5rem;
+            }
+            .content h3 {
+                font-size: 1.5rem;
+            }
+            .content p {
+                font-size: 0.95rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ribbon span {
+                width: 40px;
+                height: 10px;
+            }
+            .title-block h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="title-block"> 
+            <h1>Unsung Heroines</h1> 
+            <p class="lead">India’s freedom was shaped not only by famous leaders but also by courageous women whose stories often go untold. Kothainayaki Ammal, Rukmini Ammiyar, Anjalai Ammal, and Ambujammal defied norms, faced hardships, and dedicated their lives to the nation. Through literature, activism, and social service, they inspired change and continue to be symbols of bravery and resilience.</p>
+        </div> 
+    </header> 
+    <div class="ribbon" aria-hidden="true"> 
+        <span class="s" title="Saffron"></span>
+        <span class="w" title="White"></span> 
+        <span class="g" title="Green"></span> 
+    </div> 
+    <section class="grid" aria-label="Profiles of four Indian women freedom fighters">
+        <!-- Card 1 -->
+        <article class="card" aria-labelledby="name1"> 
+            <div class="portrait" aria-hidden="true"> 
+                <img src="15mp%20Ambujammal.jpeg" width="300" height="400"> 
+            </div> 
+            <div class="content"> 
+                <h3 id="name1">Ambujammal</h3>
+                <p>S. Ambujammal – The Life and Legacy of a Social Reformer</p>
+                <p>Born on January 8, 1899, to Srinivasa Iyengar and Ranganayaki Ammal, Ambujammal was the granddaughter of Bhashyam Iyengar, the first non-British Advocate General. She was home-schooled, fluent in Tamil, Hindi, English, and Sanskrit, and skilled in music and Veena. Married at eleven to Desikachari, she faced personal hardships with resilience, supported by her father.</p>
+                <p><u>Political and Social Work</u></p>
+                <p>Inspired by Mahatma Gandhi, Ambujammal joined the freedom struggle, promoting Khadi, leading protests, singing banned songs, and opposing social evils. She was imprisoned in Vellore Jail for boycotting foreign cloth, where she taught languages and handicrafts to women. Later, she trained at Wardha Ashram and dedicated herself to women’s empowerment and social reform.</p>
+                <p><u>Positions Held</u></p>
+                <p>State Vice President, Tamil Nadu Congress Committee (1957–1962)</p>
+                <p>Chairman, State Social Welfare Board (1957–1964)</p>
+                <p><u>Literary Contributions</u></p>
+                <p>Ambujammal wrote and translated extensively: Mahatma Gandhi Ninaivu Malai, En Thanthaiyaar, Nan Kanda Bharatham</p>
+                <p>Translations: Vedavithagar Vyasar, Sevasathan. Short Story: Avar Enge Iruppaar?</p>
+                <p><u>Recognition</u></p>
+                <p>Awarded the Padma Shri (1964)</p>
+                <p>Honored with Ambujammal Memorial Road in Chennai</p>
+                <p><u>Demise and Legacy</u></p>
+                <p>Ambujammal passed away in 1981 at the age of 82. She is remembered as a freedom fighter, reformer, and writer who spread Gandhian values and inspired generations of Indian women.</p>
+                <video width="500" height="300" controls>
+                    <source src="The%20Life%20of%20Silent%20Revolutions.mp4" type="video/mp4">
+                    <source src="The%20Life%20of%20Silent%20Revolutions.ogg" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div> 
+        </article>
+        <hr>
+
+        <!-- Card 2 -->
+        <article class="card" aria-labelledby="name2">
+            <div class="portrait" aria-hidden="true"><img src="Rukmini_Lakshmipathi.jpg" width="300" height="400"></div> 
+            <div class="content"> 
+                <h3 id="name2">Rukmini Lakshmipathi</h3> 
+                <p>Rukmini Lakshmipathi – Trailblazing Leader</p>
+                <p>Rukmini Lakshmipathi was born in Madras in an agriculturist family, the granddaughter of landlord Raja T. Ramrao. She studied at Women’s Christian College, Madras, and married Dr. Achanta Laxmipathi.</p>
+                <p>She served as secretary of the Madras branch of the Bharat Stree Mahamandal and joined the Indian National Congress in 1923. In 1926, she represented India at the International Women’s Suffrage Alliance in Paris.</p>
+                <p>Rukmini was the first woman jailed in the Salt Satyagraha (1930). Later, she entered politics, winning a by-election in 1934 and then the 1937 Assembly elections. She became the first woman Deputy Speaker of the Madras Presidency Legislative Assembly and later served as Minister for Public Health (1946–47), the only woman minister of the presidency.</p>
+                <p>In her honor, a road in Chennai bears her name, and a postage stamp was issued in 1997.</p>
+            </div>
+            <video width="500" height="300" controls>
+                <source src="A%20Life%20of%20Courage.mp4" type="video/mp4">
+                <source src="A-Life-of-Courage.ogg" type="video/ogg">
+            </video>
+        </article>
+        <hr>
+
+        <!-- Card 3 -->
+        <article class="card" aria-labelledby="name3"> 
+            <img src="GkNHGkDbwAAb-mY.jpg" width="300" height="400">
+            <div class="content"> 
+                <h3 id="name3">Anjalai Ammal</h3> 
+                <p>Anjalai Ammal – Jhansi Rani of South India</p>
+                <p>Anjalai Ammal Murugappan Padaiyatchi was a fearless freedom fighter, social worker, and politician from Cuddalore, Tamil Nadu. She spent over 7 years in prison for her role in the independence movement, earning Mahatma Gandhi’s praise as the “Jhansi Rani of South India.”</p>
+                <p>Starting her activism in 1921 with the Non-Cooperation Movement, she later joined the Neil Statue Satyagraha, Salt Satyagraha, and Quit India Movement. She even disguised herself in a burqa to meet Gandhi despite a British ban. Her young daughter Leelavathy, named by Gandhi, also joined the struggle.</p>
+                <p>Anjalai Ammal gave birth to her last son while imprisoned in Vellore Jail. She presided over the All India Women Congress in 1931 and was repeatedly arrested for her protests against foreign goods.</p>
+                <p>After Independence, she was elected to the Tamil Nadu Legislative Assembly three times. She passed away on 20 February 1961, leaving behind a legacy of courage and sacrifice.</p> 
+                <video width="500" height="300" controls>
+                    <source src="A%20Life%20of%20Public%20Service.mp4" type="video/mp4">
+                    <source src="A-Life-of-Public-Service.ogg" type="video/ogg">
+                </video>
+            </div>
+        </article>
+        <hr>
+
+        <!-- Card 4 -->
+        <article class="card" aria-labelledby="name4"> 
+            <img src="_48.png" width="300" height="400"> 
+            <div class="content"> 
+                <h3 id="name4">V.M.Kothainayaki Ammal</h3> 
+                <p>Kothainayaki – The Unwritten Page</p>
+                <p>Kothainayaki was born on 1 December 1901 in Neervalur, Tamil Nadu. Married at the age of 5½, she had no formal education but, with her husband’s encouragement, she learned languages and developed a love for storytelling, theatre, and music.</p>
+                <p>Her first play, Indira Mohana (1924), was a success, and she went on to write 115 novels, several plays, and short stories, often addressing social reforms. She became editor of Jaganmohini magazine in 1925, turning it into one of the most popular Tamil magazines of its time.</p>
+                <p>A talented Carnatic singer, she drew crowds with patriotic songs, influenced artists like D. K. Pattammal, and even had songs composed for her by Bharathiar.</p>
+                <p>Inspired by Gandhi, she joined the freedom movement, wore only khadi, protested against toddy shops and foreign goods, and was jailed multiple times. Even in prison, she wrote novels based on real lives of women inmates.</p>
+                <p>She served on the Film Censor Board, and her novels were adapted into films like Anadhai Penn (1938) and Chitthi (1966). She also worked in social service, offering free midwifery, founding Mahatmaji Seva Sangam for orphans, and donating land for Vinoba Bhave’s Bhoodan Movement.</p>
+                <p>Kothainayaki passed away on 20 February 1960. She is remembered as a writer, reformer, freedom fighter, singer, and social worker who broke barriers despite her difficult beginnings.</p>
+                <video width="500" height="300" controls>
+                    <source src="The%20Unwritten%20page.mp4" type="video/mp4">
+                    <source src="The-Unwritten-page.ogg" type="video/ogg">
+                </video>
+            </div>
+        </article>
+    </section>
+</body>
+</html>
